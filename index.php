@@ -1,7 +1,5 @@
 <?php
 require 'logic.php';
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 ?>
 
 <!doctype html>
@@ -15,10 +13,6 @@ ini_set('display_errors', 1);
   <meta name="author" content="SitePoint">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
-  <![endif]-->
 </head>
 
 <body>
@@ -33,15 +27,17 @@ ini_set('display_errors', 1);
   </div>
 
   <div>
+    <?php echo $errors ?>
+  </div>
+
+  <div>
     <form action="index.php" method="GET">
       <fieldset>
         <legend><h3>xkcd Password Configuration</h3></legend>
-        
         <p>
           <label for="min" class="block">Minimum number of words <em>(no less than 4)</em></label>
           <input type="number" id="min" name="min" min="4" max="8" autofocus="autofocus">
         </p>
-        
         <p>
           <label for="max" class="block">Maximum number of words <em>(no more than 8)</em></label>
           <input type="number" id="max" name="max" min="4" max="8">
@@ -56,7 +52,7 @@ ini_set('display_errors', 1);
         </p>
         <p>
           <input type="checkbox" id="symbol" name="symbol">
-          <label for="symbol">Add a symbol to the last word</label>
+          <label for="symbol">Add symbol(s) to the last word</label>
         </p>
         <p>
           <input type="checkbox" id="capitalize" name="capitalize">

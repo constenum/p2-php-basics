@@ -1,7 +1,15 @@
 <?php
 
-# Arrays of words, numbers, and sybols
-$word_list = ['Beet', 'Corn', 'Dill', 'Guar', 'Kale', 'Leek', 'Okra', 'Peas', 'Pear', 'Yams', 'Anise', 'Apple', 'Beans', 'Chaya', 'Chufa', 'Grape', 'Guava', 'Mango', 'Onion', 'Orach', 'Pecan', 'Bamboo', 'Banana', 'Capers', 'Carrot', 'Celery', 'Chives', 'Citron', 'Endive', 'Fennel', 'Garlic', 'Ginger', 'Gourds', 'Longan', 'Loquat', 'Lovage', 'Lychee', 'Papaya', 'Pepper', 'Pitaya', 'Potato', 'Radish', 'Rakkyo', 'Squash', 'Tomato', 'Turnip', 'Atemoya', 'Avocado', 'Burdock', 'Cabbage', 'Cardoon', 'Celtuce', 'Chayote', 'Chicory', 'Comfrey', 'Eugenia', 'Ginseng', 'Lentils', 'Lettuce', 'Mustard', 'Paprika', 'Parsley', 'Parsnip', 'Pumpkin', 'Rampion', 'Rhubarb', 'Roselle', 'Saffron', 'Shallot', 'Skirret', 'Spinach', 'Achoccha', 'Amaranth', 'Angelica', 'Arrugula', 'Broccoli', 'Celeriac', 'Cilantro', 'Collards', 'Cucumber', 'Cushcush', 'Eggplant', 'Garbanzo', 'Kangkong', 'Kohlrabi', 'Martynia', 'Mushroom', 'Pimiento', 'Pokeweed', 'Purslane', 'Rutabaga', 'Seagrape', 'Truffles', 'Zucchini', 'Arrowroot', 'Artichoke', 'Asparagus', 'Blueberry', 'Dandelion', 'Jackfruit', 'Macadamia', 'Momordica', 'Persimmon', 'Pineapple', 'Radicchio', 'Raspberry', 'Sapodilla', 'Tomatillo', 'Blackberry', 'Jaboticaba', 'Naranjillo', 'Sassafrass', 'Scorzonera', 'Watercress', 'Watermelon'];
+# Arrays of words, numbers, and symbols
+
+# Convert CSV file to an array of single words
+$word_list = [];
+$file = file_get_contents('word_list.csv');
+$lines = explode(PHP_EOL, $file);
+foreach ($lines as $line) {
+    $word_list = str_getcsv($line);
+}
+
 $numbers_list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 $symbols_list = ['(', ')', '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '-', '+', '=', '|', '\\', '{', '}', '[', ']', ':', ';', '"', '\'', '<', '>', ',', '.', '?', '/'];
 

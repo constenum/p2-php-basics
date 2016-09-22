@@ -1,9 +1,16 @@
 html {
+	position: relative;
 	font-family: Verdana, "Lucida Grande", san-serif; 
+	min-height: 100%;
+}
+
+body {
+	margin: 0 0 80px;
 }
 
 header {
 	height: 100px;
+	padding-top: 5px;
 }
 
 img {
@@ -22,12 +29,16 @@ header, main {
 	}
 
 .xkcd {
-	color: navy;
+	color: #06509f;
 	background: #ccc;
 	font-size: 28px;
 	text-align: center;
 	padding: 5px 0 10px;
 	border-radius: 10px;
+}
+
+.hide {
+	display: none;
 }
 
 .errors {
@@ -53,7 +64,7 @@ input[type=number]{
 #submit {
     background-color: #ccc;
     border-radius:6px;
-    color: navy;
+    color: #06509f;
     font-family: Georgia, "Times New Roman", serif;
     font-size: 20px;
     padding: 10px;
@@ -64,16 +75,17 @@ input[type=number]{
 
 #submit:hover {
     border: none;
-    background:navy;
+    background:#06509f;
     color: #ccc;
     box-shadow: 0px 0px 1px #777;
 }
 
 footer {
+	position: absolute;
 	height: 60px;
+	width: 100%;
+	bottom: 0;
 	text-align: center;
 	color: #fff;
-	background: navy;
-	bottom: 0;
-	line-height: 60px;
+	background: #06509f;
 }

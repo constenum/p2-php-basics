@@ -1,0 +1,79 @@
+html {
+	font-family: Verdana, "Lucida Grande", san-serif; 
+}
+
+header {
+	height: 100px;
+}
+
+img {
+	position: relative;
+	float: left;
+}
+
+h1 {
+	position: absolute;
+	margin-left: 150px;
+}
+
+header, main {
+	margin: 0 auto 20px;
+	width: 75%;
+	}
+
+.xkcd {
+	color: navy;
+	background: #ccc;
+	font-size: 28px;
+	text-align: center;
+	padding: 5px 0 10px;
+	border-radius: 10px;
+}
+
+.errors {
+	color: #fff;
+	background: red;
+	margin-top: 5px;
+	padding: 5px 0 10px 10px;
+	border-radius: 10px;
+}
+
+fieldset {
+	margin: 20px 0;
+}
+
+input[type=number]{
+    width: 30px;
+} 
+
+.indent {
+	margin-left: 24px;
+}
+
+#submit {
+    background-color: #ccc;
+    border-radius:6px;
+    color: navy;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+}
+
+#submit:hover {
+    border: none;
+    background:navy;
+    color: #ccc;
+    box-shadow: 0px 0px 1px #777;
+}
+
+footer {
+	height: 60px;
+	text-align: center;
+	color: #fff;
+	background: navy;
+	bottom: 0;
+	line-height: 60px;
+}

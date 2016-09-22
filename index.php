@@ -16,20 +16,21 @@ require 'logic.php';
 </head>
 
 <body>
-  <div>
-    <div>
-      <h1>xkcd Password Generator</h1>
-      <h2>Your new password is:</h2>
-    </div>
-    <div>
-      <?php echo $xkcd_password ?>
-    </div>
-    <div>
-      <?php echo $errors ?>
-    </div>
-  </div>
+  <header>
+    <img src="images/computer_lock.png" width="100px" alt="Computer Lock image">
+    <h1>xkcd Password Generator</h1>
+  </header>
 
-  <div>
+  <main>
+    <div>
+      <div class="xkcd">
+        <?php echo $xkcd_password ?>
+      </div>
+      <div class="errors">
+        <?php echo $errors ?>
+      </div>
+    </div>
+
     <form action="index.php" method="GET">
       <fieldset>
         <legend><h3>xkcd Password Configuration</h3></legend>
@@ -50,7 +51,7 @@ require 'logic.php';
           <label for="number">Add digit(s) to the last word</label>
         </p>
         <p>
-          <label for="numbers" class="block">How many digits <em>(between 1 and 9)</em></label>
+          <label for="numbers" class="indent">How many digits <em>(between 1 and 9)</em></label>
           <input type="number" id="numbers" name="numbers" min="1" max="9">
         </p>
         <p>
@@ -58,7 +59,7 @@ require 'logic.php';
           <label for="symbol">Add symbol(s) to the last word</label>
         </p>
         <p>
-          <label for="symbols" class="block">How many symbols <em>(between 1 and 3)</em></label>
+          <label for="symbols" class="indent">How many symbols <em>(between 1 and 3)</em></label>
           <input type="number" id="symbols" name="symbols" min="1" max="3">
         </p>
         <p>
@@ -69,6 +70,10 @@ require 'logic.php';
       
       <input type="submit" id="submit" name="submit" value="Generate Password">
     </form>
-  </div> 
+  </main>
+
+  <footer>
+      <p>&copy; 2016 Mark Miller</p>
+  </footer>
 </body>
 </html>

@@ -1,7 +1,7 @@
 # P1: System Setup / Portfolio
 
 ## Description
-2-3 sentence description of project
+Generate a xkcd password with 4 to 8 words. Includes the ability add a specified number of digits and symbols to the end of the last word. The first letter of each word can be capiltalized.
 
 ## Live URL
 <http://p2.constenum.us>
@@ -10,7 +10,7 @@
 <http://www.screencast.com/>
 
 ## Details for teaching team
-Add any details needed to understand project
+I checked index.php using the [W3C Markup Validation Service](https://validator.w3.org/) and I checked styles.css using the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/). The site was viewed on Google Chrome, Firefox, and Safari using an Apple MacBook Pro. Normalize.css was added to provide consistency between browsers.
 
 ## Outside code
-* Plugin/Libary Name: Link to plugin/library
+* Normalize.css: [https://necolas.github.io/normalize.css/](https://necolas.github.io/normalize.css/)

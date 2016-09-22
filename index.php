@@ -18,16 +18,15 @@ require 'logic.php';
 <body>
   <div>
     <div>
-    <h1>xkcd Password Generator</h1>
+      <h1>xkcd Password Generator</h1>
       <h2>Your new password is:</h2>
     </div>
     <div>
       <?php echo $xkcd_password ?>
     </div>
-  </div>
-
-  <div>
-    <?php echo $errors ?>
+    <div>
+      <?php echo $errors ?>
+    </div>
   </div>
 
   <div>
@@ -48,11 +47,19 @@ require 'logic.php';
         <legend><h3>xkcd Password Extras</h3></legend>
         <p>
           <input type="checkbox" id="number" name="number">
-          <label for="number">Add a number to the last word</label>
+          <label for="number">Add digit(s) to the last word</label>
+        </p>
+        <p>
+          <label for="numbers" class="block">How many digits <em>(between 1 and 9)</em></label>
+          <input type="number" id="numbers" name="numbers" min="1" max="9">
         </p>
         <p>
           <input type="checkbox" id="symbol" name="symbol">
           <label for="symbol">Add symbol(s) to the last word</label>
+        </p>
+        <p>
+          <label for="symbols" class="block">How many symbols <em>(between 1 and 3)</em></label>
+          <input type="number" id="symbols" name="symbols" min="1" max="3">
         </p>
         <p>
           <input type="checkbox" id="capitalize" name="capitalize">
@@ -62,7 +69,6 @@ require 'logic.php';
       
       <input type="submit" id="submit" name="submit" value="Generate Password">
     </form>
-  </div>
-  
+  </div> 
 </body>
 </html>

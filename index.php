@@ -17,7 +17,7 @@ require 'logic.php';
 
 <body>
   <header>
-    <img src="images/computer_lock.png" width="100px" alt="Computer Lock image">
+    <a href="http://www.clker.com/clipart-331561.html"><img src="images/computer_lock.png" width="100px" alt="Computer Lock image"></a>
     <h1>xkcd Password Generator</h1>
   </header>
 
@@ -26,7 +26,7 @@ require 'logic.php';
       <div class="xkcd">
         <?php echo $xkcd_password ?>
       </div>
-      <div class="errors">
+      <div class="<?php echo $error_class ?>">
         <?php echo $errors ?>
       </div>
     </div>
@@ -36,11 +36,11 @@ require 'logic.php';
         <legend><h3>xkcd Password Configuration</h3></legend>
         <p>
           <label for="min" class="block">Minimum number of words <em>(no less than 4)</em></label>
-          <input type="number" id="min" name="min" min="4" max="8" autofocus="autofocus">
+          <input type="number" id="min" name="min" min="4" max="8" value="4" autofocus="autofocus">
         </p>
         <p>
           <label for="max" class="block">Maximum number of words <em>(no more than 8)</em></label>
-          <input type="number" id="max" name="max" min="4" max="8">
+          <input type="number" id="max" name="max" min="4" max="8" value="8">
         </p>
       </fieldset>
       

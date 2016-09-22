@@ -16,6 +16,7 @@ $symbols_list = ["(", ")", "`", "~", "!", "@", "#", "$", "%", "^", "&", "*", "-"
 # Variables displayed in HTML
 $xkcd_password = "";
 $errors = "";
+$error_class = "";
 
 # Logic to generate xkcd password
 if ($_GET) {
@@ -33,6 +34,12 @@ if ($_GET) {
 	elseif ($_GET["max"] == "") {
 		$errors .= "You must select a maximum number of words." . "<br>";
 	}
+	elseif ($_GET["min"] < "4" || $_GET["min"] > "8") {
+		$errors .= "You must select a minimum number of words between 4 and 8." . "<br>";
+	}
+	elseif ($_GET["max"] < "4" || $_GET["max"] > "8") {
+		$errors .= "You must select a maximum number of words between 4 and 8." . "<br>";
+	}
 	elseif (intval($_GET["max"]) < intval($_GET["min"])) {
 		$errors .= "Maximum number of words cannot be less than minimum number of words." . "<br>";
 	}
@@ -43,12 +50,25 @@ if ($_GET) {
 	elseif (isset($_GET["number"]) && $number_of_digits == 0) {
 		$errors .= "You must select the number of digits to be added." . "<br>";
 	}
+	elseif ($number_of_digits > 9) {
+		$errors .= "The selected number of digits must be between 1 and 9." . "<br>";
+	}
 
 	if (!isset($_GET["symbol"]) && $number_of_symbols > 0) {
 		$errors .= "You must check the box to add symbols." . "<br>";
 	}
 	elseif (isset($_GET["symbol"]) && $number_of_symbols == 0) {
 		$errors .= "You must select the number of symbols to be added." . "<br>";
+	}
+	elseif ($number_of_symbols > 3) {
+		$errors .= "The selected number of symbols must be between 1 and 3." . "<br>";
+	}
+
+	if ($errors == "") {
+		$error_class = "hide";
+	}
+	else {
+		$error_class = "errors";
 	}
 	
 	# Generate password

@@ -1,4 +1,4 @@
-# P1: System Setup / Portfolio
+# P2: PHP Basics
 
 ## Description
 Generate a xkcd password with 4 to 8 words. Includes the ability add a specified number of digits and symbols to the end of the last word. The first letter of each word can be capiltalized.

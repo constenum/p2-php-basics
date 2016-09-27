@@ -33,7 +33,7 @@ require 'logic.php';
 
     <form action="index.php" method="GET">
       <fieldset>
-        <legend><h3>xkcd Password Configuration</h3></legend>
+        <legend>xkcd Password Configuration</legend>
         <p>
           <label for="min" class="block">Minimum number of words <em>(no less than 4)</em></label>
           <input type="number" id="min" name="min" min="4" max="8" value="4" autofocus="autofocus">
@@ -45,7 +45,7 @@ require 'logic.php';
       </fieldset>
       
       <fieldset>
-        <legend><h3>xkcd Password Extras</h3></legend>
+        <legend>xkcd Password Extras</legend>
         <p>
           <input type="checkbox" id="number" name="number">
           <label for="number">Add digit(s) to the last word</label>

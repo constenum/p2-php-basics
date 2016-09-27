@@ -49,6 +49,11 @@ header, main {
 	border-radius: 10px;
 }
 
+legend {
+	font-size: 20px;
+	font-weight: bold;
+}
+
 fieldset {
 	margin: 20px 0;
 }

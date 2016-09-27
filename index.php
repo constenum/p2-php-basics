@@ -17,7 +17,7 @@ require 'logic.php';
 
 <body>
   <header>
-    <a href="http://www.clker.com/clipart-331561.html"><img src="images/computer_lock.png" width="100px" alt="Computer Lock image"></a>
+    <a href="http://www.clker.com/clipart-331561.html"><img src="images/computer_lock.png" width="100" alt="Computer Lock image"></a>
     <h1>xkcd Password Generator</h1>
   </header>
 
